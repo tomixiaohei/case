@@ -405,11 +405,16 @@ footer{
     width: 100%;
 }
 .swiper-banners .swiper-slide .slide_text .slide_text_title {
-    font-size: 48px;
+    font-size: 280px;
     font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+	font-family:Damion;
 }
+.swiper-banners .swiper-slide .slide_text .slide_text_title span{
+	color:#f1ef64;
+}
+
 .swiper-banners .swiper-slide .slide_text .slide_text_desc {
 	  font-size: 30px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
