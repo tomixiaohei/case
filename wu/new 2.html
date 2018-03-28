@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tab选项卡的不同写法</title>
+<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<style>
+body, div, ul, li { margin: 0; padding: 0; list-style: none; font: 14px/30px arial, "微软雅黑"; }
+a { text-decoration: none; }
+.tab_a { width: 600px; height: auto; margin: 20px auto; }
+.tab_a .tab1ys { width: 100%; height: 50px; }
+.tab_a .tab1ys li { width: 200px; float: left; }
+.tab_a .tab1ys li a { width: 100%; height: 100%; border: 1px solid #666; border-right: none; line-height: 50px; font-size: 14px; color: #000; text-align: center; display: block }
+.tab_a .tab1ys li:last-child a { border-right: 1px solid #666; }
+.tab_a .tab1ys li a.active { background: #333; color: #CCC; }
+.tab_a .tabcon_sy { width: 100%; height: 300px; border: 1px solid #666; border-top: none; overflow: hidden; }
+.tab_a .tabcon_sy li { width: 94%; height: 100%; padding: 15px 3%; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+  <div class="tab_a" id="tab_b">
+  <h2>纯js写法(通过容器id传参给函数)</h2>
+  <ul class="tab1 tab1ys hd">
+    <li class="xz"><a class="active" href="javascript:void(0)">选项卡1</a></li>
+    <li class="xz"><a href="javascript:void(0)">选项卡2</a></li>
+    <li class="xz"><a href="javascript:void(0)">选项卡3</a></li>
+  </ul>
+  <ul class="bd tab_con  tabcon_sy">
+    <li>选项卡1的内容</li>
+    <li class="hidden">选项卡2的内容</li>
+    <li class="hidden">选项卡3的内容</li>
+	<script>
+//纯js写法
+function tab_switch2(ele_id,activeclass){
+	var contain=document.getElementById(ele_id);
+	var tab_tit=contain.querySelectorAll(".hd>*");
+	var tab_con=contain.querySelectorAll(".bd>*");
+	var tab_num=tab_tit.length;
+	var con_num=tab_con.length;
+	for(i=0;i<tab_num;i++){
+		tab_tit[i].onclick=(function(i){
+			return function(){
+				for(j=0;j<con_num;j++){
+					if(i==j){
+						tab_tit[j].firstChild.className=activeclass;
+						tab_con[j].className="";
+						}
+						else{
+							tab_tit[j].firstChild.className="";
+						    tab_con[j].className="hidden";
+							}
+					}
+				}
+			})(i);
+		}
+	}
+tab_switch2("tab_b","active");
+</script> 
+</body>
+</html>

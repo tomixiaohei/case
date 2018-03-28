@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="" type="iamge/x-icon" />
+		<title>vue</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+	</head>
+	<!--备注-->
+	<!--备注-->
+	<body>
+	
+	<!----例子一 声明式渲染----------------------------------------------------
+		<div id="app">
+			{{ message }}
+		</div>
+		
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello Vue'
+				}
+			})
+		</script>
+	 -----------------------------------------------------------------
+	 -->
+	 
+	 
+	 
+	 <!----例子二 ----------------------------------------------------
+	 
+	 
+	 
+	 
+		<div id="app-2">
+			<span v-bind:title="message">
+				鼠标悬停几秒钟查看此处动态绑定的指示信息~
+			</span>
+		</div>
+	 
+		<script type="text/javascript">
+			var app2 = new Vue({
+				el: '#app-2',
+				data: {
+					message:'页面加载于' + new Date().toLocaleString()
+				}
+			})
+		</script>
+		
+	 -----------------------------------------------------------------
+	 -->
+	 
+	 
+	 <!----例子三 条件与循环----------------------------------------------------
+	
+		<div id="app-3">
+			<p v-if="seen">现在你看到我了</p>
+		</div>
+	 
+		<script type="text/javascript">
+			var app3 = new Vue({
+				el: '#app-3',
+				data: {
+					seen: true
+				}
+			})
+		</script>
+	 
+	 -----------------------------------------------------------------
+	 -->
+	 
+	 <!----例子四 ----------------------------------------------------
+	
+	 <div id="app-4">
+		<ol>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ol>
+	 </div>
+	 
+	 <script type="text/javascript">
+		var app4 = new Vue({
+			el: '#app-4',
+			data: {
+				todos: [
+					{ text: '学习 Javascript' },
+					{ text: '学习 Vue' },
+					{ text: '整个牛项目' }
+				]
+			}
+		})
+	 </script>
+	 -----------------------------------------------------------------
+	 -->
+	 <!--
+		在控制台里，输入 app4.todos.push({ text: '新项目' })，你会发现列表最后添加了一个新项目。
+	 -->
+	
+	<!----例子五 ----------------------------------------------------
+	
+	
+	<div id="app-5">
+		<p>{{ message }}</p>
+		<button v-on:click="reverseMessage">逆转消息</button>
+	</div>
+	
+	<script type="text/javascript">
+		var app5 = new Vue({
+			el: '#app-5',
+			data: {
+				message: 'Hello Vue.js'
+			},
+			methods: {
+				reverseMessage: function(){
+					this.message = this.message.split('').reverse().join('')
+				}
+			}
+		})
+	</script>
+	
+	-----------------------------------------------------------------
+	 -->
+	
+	<!--
+		提示：
+		bind()         捆绑事件
+		methods        方法
+		data:          数据
+		split()        把一个字符串分割成字符串数组 
+		reverse()      颠倒数组中元素的顺序
+		join()         把数组中的所有元素放入一个字符串
+		component      成分，组成
+		template       模板
+		_.debounce     防反跳 定义：如果用手指一直按住一个弹簧，它将把不会弹起知直到你松手为止
+		indexOf()      返回某个指定的字符串值在字符串中首次出现的位置。
+		
+		Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中
+		
+		get()          获取元素
+		then()         等前面的函数执行加载完后执行
+		response       回答
+		_.capitalize   将字符串的第一个字母变成大写，其他字母变成小写; 对于 8 位字节编码需要根据本地环境。
+		
+		catch()        语句处理错误
+	 
+	 
+	 -->
+
+	<!----例子六 ----------------------------------------------------
+	 
+	 
+	<div id="app-6">
+		<p>{{ message }}</p>
+		<input v-model="message">
+	</div>
+	
+	<script type="text/javascript">
+		var app6 = new Vue({
+			el: '#app-6',
+			data: {
+				message: 'xiaohei'
+			}
+		})
+	</script>
+	
+	
+	-----------------------------------------------------------------
+	 -->
+	
+	
+	<!-- 组件化应用构建 -->
+	
+	<!----例子七 ----------------------------------------------------
+	 
+	 
+	<div id="app-7">
+		<ol>
+			<todo-item
+				v-for="item in groceryList"
+				v-bind:todo="item"
+				v-bind:key="item.id"
+			></todo-item>
+		</ol>
+	</div> 
+	 
+		<script type="text/javascript">
+		
+			Vue.component('todo-item', {
+				props:['todo'],
+				template:'<li>{{ todo.text }}</li>'
+			})
+			
+			var app7 = new Vue({
+				el:'#app-7',
+				data: {
+					groceryList: [
+						{ id: 0, text: '蔬菜' },
+						{ id: 1, text: '奶酪' },
+						{ id: 2, text: '随便什么东西' }
+					]
+				}
+			})
+			
+		</script> 
+		 -----------------------------------------------------------------
+	 -->
+		<!-- console app7.groceryList.push({ id: 3, text: '花菜' }) -->
+		
+	
+
+<!-- 			
+			v-bind 缩写
+			
+			 完整语法
+			<a v-bind:href="url">...</a>
+
+			缩写 
+			<a :href="url">...</a>
+			
+
+			
+			v-on 缩写
+			
+			完整语法
+			<a v-on:click="doSomething">...</a>
+
+			缩写 
+			<a @click="doSomething">...</a>
+ -->		
+		
+		<!----例子八----------------------------------------------------
+	 
+		
+		<div id="example">
+			<p>Original message: "{{ message }}"</p>
+			<p>Computed reversed message: "{{ reversedMessage }}"</p>
+		</div>	
+				
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#example',
+				data: {
+					message: 'Hello'
+				},
+				computed: {
+					
+					reversedMessage:function(){
+						
+						return this.message.split('').reverse().join('')
+					}
+				}
+			})
+		</script>
+		
+		 -----------------------------------------------------------------
+	 -->
+		
+		<!-
+			console 输入 vm.message = 'xiaobai'
+		-->
+		
+		
+		
+		<!--计算属性 vs 侦听属性-->
+		
+	<!----例子九----------------------------------------------------
+	 	
+		<div id="demo">{{ fullName }}</div>
+		
+		<script type="text/javascript">
+			
+			var vm = new Vue({
+				el: '#demo',
+				data: {
+					firstName: 'Foo',
+					lastName: 'Bar'
+				},
+				computed: {
+					fullName: function(){
+						return this.firstName + ' ' + this.lastName
+					}
+				}
+			})
+			
+		</script>
+		
+		 -----------------------------------------------------------------
+	 -->	
+		
+		
+		<!----例子十--------------------------------------------------------------------------------------------------------
+	 
+		<div id="demo">{{ fullName }}</div>
+		
+		<script type="text/javascript">
+			
+			var vm = new Vue({
+				el: '#demo',
+				data: {
+					firstName: 'Foo',
+					lastName: 'Bar'
+				},
+				computed: {
+					fullName:{
+						
+						get: function(){
+							return this.firstName + ' ' + this.lastName
+						},
+						
+						set: function(newValue){
+							var names = newValue.split(' ')
+							this.firstName = names[0]
+							this.lastName = names[names.length - 1]
+						}
+					}
+				}
+			})
+			
+		</script>
+		
+			 -----------------------------------------------------------------
+	 -->	
+			
+		<!-- console 输出 vm.fullName = 'java script' -->
+		
+		
+		<div id="watch-example">
+			<p>
+				Ask a yes/no question:
+				<input v-model="question">
+			</p>
+			<p>{{ answer }}</p>
+		</div>
+		
+		
+		<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+		<script type="text/javascript">
+			
+			var watchExampleVM = new Vue({
+				el: '#watch-example',
+				data: {
+					question: '',
+					answer: 'I cannot give you an answer until you ask a question'
+				},
+				watch: {
+					question: function(newQuestion, oldQuestion){
+						this.answer = 'Waiting for you to stop typing...'
+						this.getAnswer()
+					}
+				},
+				methods: {
+					getAnswer: _.debounce(
+						function(){
+							if(this.question.indexOf('?') === -1){
+								this.answer = 'Questions usually contain a question mark. ;-)'
+								return
+							}
+							this.answer = 'Thinking...'
+							var vm = this
+							axios.get('https://yesno.wtf/api')
+							.then(function(response){
+								vm.answer =  _.capitalize(response.data.answer)
+							})
+							.catch(function(error){
+								vm.answer = 'Error! Could not reach the API. ' + error
+							},
+								500
+							)
+						}
+					)
+				}
+			})
+			
+		</script>
+		
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ 

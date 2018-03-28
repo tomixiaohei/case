@@ -1,0 +1,136 @@
+.	news{
+		height:460px;
+		background:#fff;
+		
+	}	
+	
+	.news .ind_news{
+		width:1100px;
+		margin:0 auto;
+		height:auto;
+		background:#767680;
+	}
+		
+	.news_list ul {
+		height:404px;
+		margin-bottom:30px;
+	}	
+		
+	.news_list ul li{
+		width:336px;
+		height:342px;
+		float:left;
+		margin-right:46px;
+		margin-top:60px;
+		background:red;
+		border-bottom:3px solid green;
+	}	
+	
+		
+	.news_list ul .last{
+		margin-right:0;
+	}
+
+	.news_list ul li .img_box{
+		height:160px;
+		width:260px;
+		background:background:#ccc;
+		margin:0 auto;
+	}
+	
+	.news_list ul li .img_box a {
+		
+		display:block;
+		text-decoration:none;
+		transition:transform .5s;
+		-webkit-transition:transform .5s;
+		-moz-transition:transform .5s;
+		-o-transition:transform .5s;
+	}
+	
+	.news_list ul li .img_box img{
+		
+		-webkit-transition: all 0.5s linear -1ms;
+		-moz-transition: all 0.5s linear -1ms;
+		-ms-transition: all 0.5s linear -1ms;
+		-o-transition: all 0.5s linear -1ms;
+		transition: all 0.5s linear -1ms;
+		}
+
+	.news_list ul li .img_box a:hover{
+		border:1px solid #ccc;
+	}	
+		
+	
+	
+	
+	
+	
+	
+	.news_list .info .time{
+		width:64px;
+		height:124px;
+		background:url(../img/news-a-before.jpg) no-repeat 0 0 ;	
+		background-size:100% 100%;
+		font-size:14px;
+		color:#5c4c4c;
+		text-align:center;
+		padding-top:10px;
+		//display:block;
+		transition:background .5s linear;
+		-webkit-transition:background .5s;
+		-moz-transition:background .5s;
+		-o-transition:background .5s;
+		margin-right:16px;
+		float:left;;
+	}
+	
+	.news_list  .text{
+		width:256px;
+		height:120px;
+		//background:#fb8080;
+		float:left;
+		//text-align:center;
+		text-overflow: ellipsis;
+		display: -webkit-box;	/* 对象作为伸缩盒子模型显示 */
+		-webkit-box-orient: vertical;	/* 设置或检索伸缩盒对象的子元素的排列方式 */
+		-webkit-line-clamp: 3;	 /* 显示的行数 */
+		overflow: hidden;	/* 隐藏超出的内容 */
+	}
+	
+	.news_list  .text a{
+		font-size:15px;
+		margin-left:20px;
+		color:#5c4c4c;
+	}
+	
+	.news_list .text h3 a:hover{
+		color:#14a83b;
+	}
+	
+	.news_list .text p{
+		font-size:12px;
+		color:#666;
+		margin-top:10px;
+		
+	}
+	
+	.news_list .infoa:hover{
+		background:url(../img/news-a-hover-2.jpg) no-repeat 0 0 ;	
+		background-size:100% 100%;
+	}
+	
+	.news_list .info .time .year{
+		font-size:12px;
+		margin-top:2px;
+		color:rgba(113,100,95,.8);
+	}
+	
+	.news{
+		width:100%;
+		height:580px;
+		background:#fb8080;
+	}
+	
+	
+	

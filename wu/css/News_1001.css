@@ -1,0 +1,42 @@
+
+
+.page_news_list{
+	width:1032px;
+	height:auto;
+	//background:#fb8080;
+}
+
+.news_list ul li{
+	width:1080px;
+	height:200px;
+	border-bottom:1px solid #ccc;
+	box-sizing:border-box;	
+}
+
+.news_list ul li .img_box,
+.news_list ul li .info{
+	float:left;
+}
+
+
+.news_list ul li .info .time{
+	float:right;
+	margin-left:90px;
+}
+
+.news_list ul li .info .text{
+	width:600px;
+	margin-left:50px;
+}
+
+.page_news_list .pageGuide{
+	margin-top:10px;
+}
+
+.page_banner_wrap .banner_title .b-title {
+    width: 92px;
+    height: 200px;
+    background: url(../img/news-1001.gif) no-repeat 0 0;
+    float: left;
+    background-size: 100% 100%;
+}

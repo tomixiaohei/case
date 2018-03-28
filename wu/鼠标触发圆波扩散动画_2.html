@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			   body {
+       //background: rgb(0, 171, 217)
+   }
+   a {
+       text-decoration: none;
+   }
+   section .serv {
+       text-align: center;
+       margin-top: 160px;
+       height: 180px;
+   }
+   section .serv li {
+       display: inline-block;
+       margin: 0 20px;
+       vertical-align: top;
+       position: relative;
+       width: 138px;
+       height: 138px;
+   }
+   section .serv li a {
+       display: block;
+       width: 138px;
+       background: url(./img/fuwu_quan_img.png);
+       text-align: center;
+       line-height: 138px;
+       border-radius: 50%;
+       font-size: 20px;
+       color: #124655;
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 999;
+   }
+   section .serv li img {
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 990;
+   }
+   /*section .serv li a:hover{ width:180px; line-height:180px; font-size:40px; background:#124655; color:#fff; margin-top:-30px;}*/
+   
+   section .serv li a:hover+img {
+       -webkit-animation: quan 2s linear infinite;
+       animation: quan 2s linear infinite;
+   }
+   @-webkit-keyframes quan {
+       from {
+           -webkit-transform: scale(1);
+           transform: scale(1);
+           opacity: 1;
+       }
+       to {
+           -webkit-transform: scale(1.2);
+           transform: scale(1.2);
+           opacity: 0.1;
+       }
+   }
+   @keyframes quan {
+       from {
+           -webkit-transform: scale(1);
+           transform: scale(1);
+           opacity: 1;
+       }
+       to {
+           -webkit-transform: scale(1.3);
+           transform: scale(1.3);
+           opacity: 0.1;
+       }
+   }
+		</style>
+	</head>
+	<!--备注-->
+	<!--备注-->
+	<body>
+		<section>
+			<ul class="serv">
+				<li><a href="#">网页设计</a><img src="./img/fuwu_quan.png">
+				</li>
+				<li><a href="#">网店装修</a><img src="./img/fuwu_quan.png">
+				</li>
+				<li><a href="#">UI设计</a><img src="./img/fuwu_quan.png">
+				</li>
+				<li><a href="#">精品课程</a><img src="./img/fuwu_quan.png">
+				</li>
+			</ul>
+		</section>		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ 

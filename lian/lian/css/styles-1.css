@@ -1,0 +1,312 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,100,400);
+
+@import url(http://fonts.font.im/css?family=Economica:400,700);
+
+
+
+
+header {
+  background-color: white;
+  padding: 0 30px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  line-height: 2em
+}
+
+header a {
+  font-size: 20px
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  text-align: center
+}
+
+.demo-wrapper-pro{
+	margin-top:40px;
+}
+
+.portfolio-items-pro {
+  height: 360px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-bottom: 30px;
+  position: relative
+}
+
+.portfolio-items-pro > li {
+  display: inline-block;
+  vertical-align: top
+}
+
+.item-pro {
+  width: 300px;
+  height: 202px;
+  margin: 68px 20px 0;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: white;
+  font-size: 14px;
+  opacity: 0;
+  position: relative;
+  top: -300px;
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.05);
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transition: all .3s ease, opacity 2s ease,  top 1s ease;
+  -o-transition: all .3s ease, opacity 2s ease,  top 1s ease;
+  transition: all .3s ease, opacity 2s ease,  top 1s ease
+}
+
+.item-pro:nth-child(even) {
+ // margin-top: 100px
+}
+
+.item-pro:hover {
+  height: 270px;
+  padding: 15px;
+  -webkit-transform: translateY(-68px);
+  -ms-transform: translateY(-68px);
+  -o-transform: translateY(-68px);
+  transform: translateY(-68px)
+}
+
+.item-pro:hover .date {
+  -webkit-transform: translate3d(0, 61px, 0);
+  -ms-transform: translate3d(0, 61px, 0);
+  -o-transform: translate3d(0, 61px, 0);
+  transform: translate3d(0, 61px, 0)
+}
+
+.item-pro:hover figcaption {
+  -webkit-animation: show .25s ease-in .120s forwards;
+  -o-animation: show .25s ease-in .120s forwards;
+  animation: show .25s ease-in .120s forwards
+}
+
+.item-pro:hover p:nth-of-type(1) span {
+  -webkit-animation: slideOut .25s ease-out .15s forwards;
+  -o-animation: slideOut .25s ease-out .15s forwards;
+  animation: slideOut .25s ease-out .15s forwards
+}
+
+.item-pro:hover p:nth-of-type(2) span {
+  -webkit-animation: slideOut .2s  ease-out .3s forwards;
+  -o-animation: slideOut .2s  ease-out .3s forwards;
+  animation: slideOut .2s  ease-out .3s forwards
+}
+
+.item-pro:hover .view {
+  height: 170px
+}
+
+.item-pro:hover .view img {
+  top: -20px;
+  left: -20px
+}
+
+.falldown {
+  top: 0;
+  opacity: 1;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0)
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.item-pro .view {
+  overflow: hidden;
+  width: 100%;
+  height: 190px;
+  position: relative;
+}
+
+.item-pro .view img {
+  width: 300px;
+  height: 190px;
+  -webkit-transition: width .3s ease;
+  -o-transition: width .3s ease;
+  transition: width .3s ease;
+  position: absolute
+}
+
+.item-pro figcaption {
+  height: 60px;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0;
+  text-align: center;
+}
+
+.item-pro figcaption p {
+  line-height: 25px !important;
+  font: bold 12px/18px Microsoft YaHei, "Arial", sans-serif;
+  text-transform: uppercase;
+  padding: 0 10px;
+  margin: 5px 0;
+  width: 100%;	
+  background-color: #f0f0f0;
+  color: rgba(86, 86, 86, 0.92);
+  
+}
+
+.item-pro figcaption p:first-child{
+	font-size:15px ;
+}
+
+.item-pro figcaption span {
+  left: -100%;
+  opacity: 0;
+  position:relative;
+}
+
+
+
+
+@keyframes slideOut {
+  0% {
+    left: -100%;
+    opacity: 0
+  }
+
+  95% {
+    left: 0;
+    opacity: 0.2
+  }
+
+  100% {
+    opacity: 1;
+    left: 0
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  cursor: pointer
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb {
+  //border-radius: 10px;
+  background-color: #fbf149;
+  
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    left: -100%;
+    opacity: 0
+  }
+
+  95% {
+    left: 0;
+    opacity: 0.2
+  }
+
+  100% {
+    opacity: 1;
+    left: 0
+  }
+}
+
+@-o-keyframes slideOut {
+  0% {
+    left: -100%;
+    opacity: 0
+  }
+
+  95% {
+    left: 0;
+    opacity: 0.2
+  }
+
+  100% {
+    opacity: 1;
+    left: 0
+  }
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1
+  }
+}
+
+@-o-keyframes show {
+  to {
+    opacity: 1
+  }
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+	
+	.demo-wrapper{
+		width:100%;
+	}
+	
+	.item{
+		width:250px;
+		height:152px;
+		margin: 150px 10px 0;
+	}
+		
+	.item img{
+		width:250px;
+		height:140px; 
+		
+	}	
+}
+
+@media screen and (max-width: 768px){
+	.demo-wrapper{
+		width:100%;
+	}
+	
+	.item{
+		width:220px;
+		height:132px;
+		margin: 150px 5px 0;
+	}
+		
+	.item img{
+		width:230px;
+		height:110px; 
+		
+	}	
+}
+
+
+
+
+
+

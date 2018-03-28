@@ -1,0 +1,70 @@
+
+
+.messages{
+	width:800px;
+	margin:0 auto;
+	//background:#ddd;
+	height:300px;
+	color:#14a83b;
+	font-size:14px;
+}
+
+form{
+	display:block;
+}
+
+.input{
+	border:1px solid #ccc;
+	border-bottom-color:#ddd;
+	border-right-color:#ddd;
+	height:28px;
+	line-height:28px;
+	font-size:12px;
+}
+
+.textarea{
+	border:1px solod #ccc;
+	border-bottom-color:#ddd;
+	border-right-color:#ddd;
+	height:92px;
+	line-height:24px;
+	font-size:12px;
+}
+
+.button_1_b{
+	display:block;
+	background:#14a83b;
+	height:30px;
+	line-height:30px;
+	font-size:15px;
+	font-weight:blod;
+	text-align:center;
+	transition:all .8s ease;
+	-moz-transition:all .8s ease;
+	-webkit-transition:all .8s ease;
+	-o-transition:all .8s ease;
+	box-sizing:border-box;
+}
+
+.button_1_b:link, .button_1_b:visited {
+    color: #fff;
+}
+
+
+.page_banner_wrap .banner_title .b-title {
+    width: 92px;
+    height: 200px;
+    background: url(../img/join-1001.gif) no-repeat 0 0;
+    float: left;
+    background-size: 100% 100%;
+
+
+
+
+
+
+
+
+
+
+

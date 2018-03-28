@@ -1,0 +1,130 @@
+
+
+.page_pro{
+	width:1100px;
+	height:auto;
+	margin:0 auto;
+	//background:#fb8080;
+	margin-top: 36px;
+	margin-bottom:90px;
+	padding-left: 45px;
+	
+}
+
+.page_pro .pro_list{
+	text-align:center;
+}
+
+.page_pro .pro_list .picList li{
+		box-sizing:border-box;
+		position:relative;
+		height:275px;
+		//width:225px;
+		width:25%;
+		float:left;
+		background:#fb8080;
+		background:url(../img/jqhjhwjhwqdkjhw.gif) no-repeat 0 0 ;
+		transition:background .5s ease-in-out;
+		-webkit-transition:background .5s ease-in-out;
+		-moz-transition:background .5s ease-in-out;
+		-o-transition:background .5s ease-in-out;
+		margin-bottom:30px;
+	}	
+		
+	.page_pro .pro_list .picList li .img_box{
+		position:relative;
+		width:180px;
+		height:180px;
+		margin-left:-5px;
+		//background:#ccc;
+		transition:background .5s;
+		vertical-align:center;
+		margin:0 auto;
+		margin-top:20px;
+		padding-right: 52px;
+		//padding-top: 7px;
+	}	
+	
+	.page_pro .pro_list .picList li .img_box img{
+		text-align:center;
+		vertical-align:middle;
+	}
+	
+	.page_pro .pro_list .picList li:hover{
+		//margin-top:5px;
+		background:url(../img/hover_border.gif) no-repeat 0 0 ;
+		
+		
+	}
+	//.picScroll-left3 .list_demo .picList li .img_box:hover{
+		background:#13749f;
+		width:180;
+		height:180;
+		padding:9px;
+	}	
+	
+	.page_pro .pro_list .picList li .info_box{
+		height:50px;
+		line-height:50px;
+		text-align:center;
+		padding-right:52px;
+	}
+	
+	.page_pro .pro_list .picList li .info_box a{
+		color:#695d5a;
+		font-size:14px;
+	}	
+	
+	.pageGuide{
+		width:100%;
+		font-size:12px;
+		padding-top:20px;
+		float:left;
+		padding-bottom:50px;
+	}
+	
+	.pageGuide .paging{
+		text-align:center;
+	}
+
+	.pageGuide .pageinfo{
+		text-align:left;
+	}
+	
+	.pageGuide .paging a{
+		display:inline-block;
+		margin-left:6px;
+		border:1px solid #695d5a;
+		padding-left:10px;
+		padding-right:10px;
+		height:25px;
+		line-height:25px;
+		overflow:hidden;
+	}
+	
+	.pageGuide .paging a:hover{
+		background:#14a83b;
+		color:#fff;
+		border:1px solid #14a83b;
+	}
+	.pageGuide .paging .current{
+		color:#fff;
+		background:#14a83b;
+		border:1px solid #14a83b;
+	}	
+	
+	
+.page_banner_wrap .banner_title .b-title{
+	width:92px;
+	height:200px;
+	background:url(../img/pro-1001.gif) no-repeat 0 0 ;
+	float:left;
+	background-size:100% 100%;
+}
+	
+
+	
+	
+	
+	
+	
