@@ -1,44 +1,34 @@
-
-/*°Ù¶ÈµØÍ¼ÖÆ×÷ÉùÃ÷£º
-	1,Ö»ĞèÒª¸ü»»ÖĞĞÄµã×ø±êºÍ±ê×¢µãÊı×é×ø±ê£»
-	  Ê°È¡×ø±êÏµÍ³:http://api.map.baidu.com/lbsapi/getpoint/index.html
-	  
-	2,ĞŞ¸ÄµØÍ¼ÌáÊ¾¿òÄÚÈİ£»
------------------------------------------------------------
-*/
-
-	//´´½¨ºÍ³õÊ¼»¯µØÍ¼º¯Êı£º
+//åˆ›å»ºå’Œåˆå§‹åŒ–åœ°å›¾å‡½æ•°ï¼š
     function initMap(){
-      createMap();//´´½¨µØÍ¼
-      setMapEvent();//ÉèÖÃµØÍ¼ÊÂ¼ş
-      addMapControl();//ÏòµØÍ¼Ìí¼Ó¿Ø¼ş
-      addMapOverlay();//ÏòµØÍ¼Ìí¼Ó¸²¸ÇÎï
+      createMap();//åˆ›å»ºåœ°å›¾
+      setMapEvent();//è®¾ç½®åœ°å›¾äº‹ä»¶
+      addMapControl();//å‘åœ°å›¾æ·»åŠ æ§ä»¶
+      addMapOverlay();//å‘åœ°å›¾æ·»åŠ è¦†ç›–ç‰©
     }
-	
-	  //´´½¨µØÍ¼º¯Êı£º
     function createMap(){ 
       map = new BMap.Map("map"); 
-      map.centerAndZoom(new BMap.Point(116.421692,39.946227);
+      map.centerAndZoom(new BMap.Point(113.369536,23.258946),18);
     }
-	
-	//µØÍ¼ÊÂ¼şÉèÖÃº¯Êı£º
     function setMapEvent(){
-      map.enableScrollWheelZoom();  //ÆôÓÃµØÍ¼¹öÂÖ·Å´óËõĞ¡
-      map.enableKeyboard();  	    //ÆôÓÃ¼üÅÌÉÏÏÂ×óÓÒ¼üÒÆ¶¯µØÍ¼
-      map.enableDragging();         //ÆôÓÃµØÍ¼ÍÏ×§ÊÂ¼ş£¬Ä¬ÈÏÆôÓÃ(¿É²»Ğ´)
-      map.enableDoubleClickZoom()	//ÆôÓÃÊó±êË«»÷·Å´ó£¬Ä¬ÈÏÆôÓÃ(¿É²»Ğ´)
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
     }
     function addClickHandler(target,window){
       target.addEventListener("click",function(){
         target.openInfoWindow(window);
       });
     }
+	
+	
+	
+	
+	
     function addMapOverlay(){
-      
-	  //±ê×¢µãÊı×é
-	  var markers =  [
-			{content:"µØÖ·£º¹ãÖİÊĞ°×ÔÆÇø´óÔ´±±Â·½ğ´ÜÎ÷½Ö×Ô±à36ºÅ",title:"¹ãÖİÎè¶¯ÉùÑİ¹ã¸æÓĞÏŞ¹«Ë¾",imageOffset: {width:-46,height:-21},position:{lat:23.258888,lng:113.368647}},
-			
+      var markers = [
+        {content:"åœ°å€ï¼šå¹¿å·å¸‚ç™½äº‘åŒºå¤§æºåŒ—è·¯é‡‘çªœè¥¿è¡—è‡ªç¼–36å·",title:"å¹¿å·èˆåŠ¨å£°æ¼”å¹¿å‘Šæœ‰é™å…¬å¸",imageOffset: {width:-46,height:-21},position:{lat:23.258888,lng:113.368647}},
+        {content:"æˆ‘çš„å¤‡æ³¨",title:"æˆ‘çš„æ ‡è®°",imageOffset: {width:0,height:3},position:{lat:23.258897,lng:113.368683}}
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
@@ -57,7 +47,7 @@
         map.addOverlay(marker);
       };
     }
-    //ÏòµØÍ¼Ìí¼Ó¿Ø¼ş
+    //å‘åœ°å›¾æ·»åŠ æ§ä»¶
     function addMapControl(){
       var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
       scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
