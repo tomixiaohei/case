@@ -1,6 +1,6 @@
 /*百度地图制作声明：
 	1,只需要更换中心点坐标和标注点数组坐标；
-	  拾取坐标系统:http://api.map.baidu.com/lbsapi/getpoint/index.html
+	  拾取坐标系统:https://api.map.baidu.com/lbsapi/getpoint/index.html
 	  
 	2,修改地图提示框内容；
 -----------------------------------------------------------
