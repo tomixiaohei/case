@@ -276,8 +276,9 @@
 		margin-top:10px;
 		display:inline-block;
 		margin-left:20px;
-		width:11px;
-		height:11px;
+		width:8px;
+		height:8px;
+		border-radius:50%;
 		line-height:11px;
 		/*border:1px solid #eb6500;*/
 		cursor:pointer;
