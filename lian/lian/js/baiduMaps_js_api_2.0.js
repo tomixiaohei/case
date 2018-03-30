@@ -36,10 +36,10 @@
     function addMapOverlay(){
       
 	  //标注点数组
-	  var markers = [
-        {ccontent:"地址：北京市东城区交道口东大街4-17号<br/>电话：010-67023969",title:"北京吴裕泰茶业股份有限公司",imageOffset: {width:-46,height:-21},position:{lat:23.258888,lng:113.368647}}
-		
-	  ];
+	  var markers =  [
+			{content:"地址：广州市白云区大源北路金窜西街自编36号",title:"广州舞动声演广告有限公司",imageOffset: {width:-46,height:-21},position:{lat:23.258888,lng:113.368647}},
+			
+      ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
         var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
