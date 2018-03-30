@@ -16,13 +16,13 @@
       map.enableDoubleClickZoom()
     }
     function addClickHandler(target,window){
-      target.addEventListener("click",function(){
+      target.addEventListener("mouseover",function(){
         target.openInfoWindow(window);
       });
     }
 	
 	
-	
+
 	
 	
     function addMapOverlay(){
@@ -59,3 +59,5 @@
     }
     var map;
       initMap();
+	  
+	  
