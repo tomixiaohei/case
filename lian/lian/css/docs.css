@@ -405,16 +405,11 @@ footer{
     width: 100%;
 }
 .swiper-banners .swiper-slide .slide_text .slide_text_title {
-    font-size: 280px;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
-	font-family:Damion;
 }
-.swiper-banners .swiper-slide .slide_text .slide_text_title span{
-	color:#f1ef64;
-}
-
 .swiper-banners .swiper-slide .slide_text .slide_text_desc {
 	  font-size: 30px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
@@ -560,10 +555,10 @@ footer{
 }
 .fh5co-nav-toggle.fh5co-nav-white > i {
   color: #fff;
-  background: #1199d2;
+  background: #80B3FF;
 }
 .fh5co-nav-toggle.fh5co-nav-white > i::before, .fh5co-nav-toggle.fh5co-nav-white > i::after {
-  background: #1199d2;
+  background: #80B3FF;
 }
 
 .fh5co-nav-toggle i::before {
@@ -906,7 +901,7 @@ footer{
 
 
 /* ------------------------------------------------------------------------------
-  start inside-about-us
+  start inside-about-us 
 -------------------------------------------------------------------------------*/
 
 	.inside-main {
@@ -1071,6 +1066,34 @@ footer{
   end inside-about us
 -------------------------------------------------------------------------------*/
 
+
+		/*-----------------------------------------------------------------------
+				移动端title start
+		------------------------------------------------------------------------*/
+			
+			.m-title{
+				display:none;
+			}
+			
+			.m-title h3{
+				font-size: 17px;
+				color: #7EADF7;
+				text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
+				text-align: center;
+				margin: 8px 0 0 0;
+			}
+			
+			.m-title span{
+				width: 60px;
+				display: inline-block;
+				height: 2px;
+				background: #fbf149;
+			}
+
+		/*-----------------------------------------------------------------------
+				移动端title end
+		------------------------------------------------------------------------*/	
+			
 	
 /* ------------------------------------------------------------------------------
   strat inside-news
@@ -1228,8 +1251,7 @@ footer{
  
 .news-word span{
 	float: right;
-    margin-top: -30px;
-	
+    margin-top: -32px;
 	color:#7D7D7D;
 	font-weight:bold;
 	position:relative;
@@ -1448,7 +1470,8 @@ footer{
 	.inside-service{
 		margin-bottom:40px;
 		line-height:40px;
-		margin-right:20px;
+		margin-right: 10px;
+		margin-left: 10px;
 	}
 	
 
