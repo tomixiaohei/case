@@ -28,7 +28,7 @@
     function addMapOverlay(){
       var markers = [
         {content:"地址：广州市白云区大源北路金窜西街自编36号",title:"广州舞动声演广告有限公司",imageOffset: {width:-46,height:-21},position:{lat:23.258888,lng:113.368647}},
-        {content:"我的备注",title:"我的标记",imageOffset: {width:0,height:3},position:{lat:23.258897,lng:113.368683}}
+        
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
