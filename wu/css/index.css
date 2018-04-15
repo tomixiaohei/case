@@ -22,6 +22,7 @@
 		}
 
 	
+	
 	.header_mid{
 		height:75px;
 	}	
@@ -228,6 +229,11 @@
 		
 	}	
 	
+	.slideBox img{
+		width:1920px;
+		height:640px;
+		display:block;
+	}
 	
 	.slideBox{
 		width:1920px;

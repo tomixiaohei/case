@@ -1533,6 +1533,57 @@ footer{
 
 
 
+#Message {
+  height: 300px;
+  display:none;
+}
+#Message .text-title {
+  font-size: 18px;
+  color: rgba(0, 102, 255, 0.5);
+  text-align:center;
+  margin: 10px 0 20px;
+}
+#Message .item-form ul {
+  margin: 0;
+  padding: 0;
+}
+#Message .item-form li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+#Message .item-form input {
+  width: 100%;
+  text-indent: 6px;
+  line-height: 33px;
+  border: 1px solid rgba(0, 102, 255, 0.6);
+  color: #999;
+  height: 33px;
+  background: none;
+}
+#Message .item-form textarea {
+  width: 100%;
+  min-height: 100px;
+  border:  1px solid rgba(0, 102, 255, 0.6);
+  background: none;
+}
+#Message .item-form .submit a{
+  display: block;
+  zoom: 1;
+  background: rgba(0, 102, 255, 0.5);
+  padding: 10px 30px;
+  text-align: center;
+  border: 0px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+
+.fancybox-close{
+	background:url(../img/close.png) no-repeat  !important;
+}
 
 
 
