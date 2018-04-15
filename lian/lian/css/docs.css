@@ -1231,8 +1231,11 @@ footer{
 }
 
 .inside-news .inside-news-list:hover{
-	border-top:1px solid rgba(0, 102, 255, 0.3);
-	border-bottom:1px solid rgba(0, 102, 255, 0.5);
+	border-top: 1px solid rgba(0, 102, 255, 0);
+    border-bottom: 1px solid rgba(0, 102, 255, 0);
+    //margin-right: 30px;
+    box-shadow: 4px 10px 10px rgba(0, 102, 255, 0.04);
+    margin-left: 10px;
 }
  
 .inside-news .inside-news-list:hover .news-word h3{
