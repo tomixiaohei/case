@@ -121,7 +121,7 @@
 		height: 330px;
 	}
 	.swiper-banners .swiper-slide img {
-		width: auto;
+		width: 100%;
 		height: 330px;
 	}
 	.swiper-banners .swiper-slide .slide_text .slide_text_title {
