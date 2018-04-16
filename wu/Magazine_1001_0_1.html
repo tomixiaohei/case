@@ -30,6 +30,108 @@
 				float: left;
 				background-size: 100% 100%;
 			}
+			
+			
+		 .list_box ul li
+        {
+            position: relative;
+			height: 300px;
+			width: 180px;
+			float: left;
+			margin-right: 20px;
+			margin-left: 20px;
+			margin-bottom: 30px;
+        }
+
+		
+        .list_box ul li:last-child
+        {
+            margin-right: 0;
+        }
+
+        .list_box ul li a
+        {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            /*舞台（动画元素的父容器）perspective*/
+            -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+
+        }
+
+        .list_box ul li a > div
+        {
+            position: absolute;
+            left: 0;
+            height: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            /*动画元素transform-style*/
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -webkit-transition: .8s ease-in-out ;
+            -moz-transition:  .8s ease-in-out ;
+            /*动画元素背后设置为hidden*/
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+        }
+
+        .list_box ul li a div:first-child
+        {
+            /*
+            绕y轴旋转
+            */
+            -webkit-transform: rotateY(0);
+            -moz-transform: rotateY(0);
+            z-index: 2;
+        }
+
+        .list_box ul li a div:last-child
+        {
+            background: url("images/bg.jpg") no-repeat 0 0;
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            z-index: 1;
+        }
+
+        .list_box ul li a:hover div:first-child
+        {
+            -webkit-transform: rotateY(-180deg);
+            -moz-transform: rotateY(-180deg);
+        }
+
+        .list_box ul li a:hover div:last-child
+        {
+            -webkit-transform: rotateY(0);
+            -moz-transform: rotateY(0);
+        }
+
+        .list_box ul li a div h3
+        {
+            margin: 0 auto 15px;
+            padding: 15px 0;
+            width: 200px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 14px;
+            text-align: center;
+            border-bottom: 1px #fff dashed;
+        }
+
+        .list_box ul li a div p
+        {
+            padding: 0 10px;
+            font-size: 12px;
+            text-indent: 2em;
+            line-height: 18px;
+        }
+
+
+    
+			
 		
 		</style>
 	</head>
@@ -187,13 +289,21 @@
 				<p class="text_title textC text_16 pGreen">点击封面，即可下载《茗鉴》电子杂志！</p>
 			</div>
 			<div class="page_honor_list pt30 pb50">
+			
+				
 				<div class="list_box">
 
 					<ul>
+						
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0812/20150812021114114.zip">
-									<img src="./img/20150812020733595.jpg" title="" alt="">
+									<div>
+										<img alt="" src="./img/20150812020733595.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -205,7 +315,12 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-49.zip">
-									<img src="./img/20150602030901235.jpg" title="" alt="">
+									<div>
+										<img alt="" src="./img/20150602030901235.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -217,7 +332,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-48.zip">
-									<img src="./img/20150602064432762.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602064432762.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -229,7 +350,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-47.zip">
-									<img src="./img/20150602064504425.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602064504425.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -241,7 +368,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-46.zip">
-									<img src="./img/20150602064526958.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602064526958.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -253,7 +386,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0601/mingjian-45.zip">
-									<img src="./img/20150602065222738.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602065222738.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -265,7 +404,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0601/mingjian-44.zip">
-									<img src="./img/20150602065242623.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602065242623.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -277,7 +422,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0601/mingjian-43.zip">
-									<img src="./img/20150602065301186.jpg" title="" alt="">
+								
+									<div>
+										<img alt="" src="./img/20150602065301186.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -289,7 +440,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0601/mingjian-42.zip">
-									<img src="./img/20150602065742598.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602065742598.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -301,7 +458,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0601/mingjian-41.zip">
-									<img src="./img/20150602065759315.jpg" title="" alt="">
+								
+									<div>
+										<img alt="" src="./img/20150602065759315.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -313,7 +476,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0601/mingjian-40.zip">
-									<img src="./img/20150602065815793.jpg" title="" alt="">
+								
+									<div>
+										<img alt="" src="./img/20150602065815793.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -325,7 +494,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-39.zip">
-									<img src="./img/20150602064545629.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602064545629.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -337,7 +512,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-38.zip">
-									<img src="./img/20150602064604440.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602064604440.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -349,7 +530,13 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-37.zip">
-									<img src="./img/20150602065301186.jpg" title="" alt="">
+									
+									<div>
+										<img alt="" src="./img/20150602065301186.jpg" />
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">
@@ -361,7 +548,14 @@
 						<li>
 							<div class="img_box">
 								<a data-fancybox-group="gallery" title="" class="mg_auto fancybox" href="http://www.wuyutai.com/uploadfile/2015/0602/mingjian-36.zip">
-									<img src="./img/20150602064622851.jpg" title="" alt="">
+								
+									<div>
+										<img alt="" src="./img/20150602064622851.jpg" />
+										
+									</div>
+									<div>
+										<img alt="" src="./img/download.jpg" />
+									</div>
 								</a>
 							</div>
 							<div class="info_box">

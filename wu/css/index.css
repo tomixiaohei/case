@@ -1544,6 +1544,105 @@
 
 /* page_honor_list
 --------------------------------------------------------------*/
+	
+		 .list_box ul li
+        {
+            position: relative;
+			height: 300px;
+			width: 180px;
+			float: left;
+			margin-right: 20px;
+			margin-left: 20px;
+			margin-bottom: 30px;
+        }
+
+		
+        .list_box ul li:last-child
+        {
+            margin-right: 0;
+        }
+
+        .list_box ul li a
+        {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            /*舞台（动画元素的父容器）perspective*/
+            -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+
+        }
+
+        .list_box ul li a > div
+        {
+            position: absolute;
+            left: 0;
+            height: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            /*动画元素transform-style*/
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -webkit-transition: .8s ease-in-out ;
+            -moz-transition:  .8s ease-in-out ;
+            /*动画元素背后设置为hidden*/
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+        }
+
+        .list_box ul li a div:first-child
+        {
+            /*
+            绕y轴旋转
+            */
+            -webkit-transform: rotateY(0);
+            -moz-transform: rotateY(0);
+            z-index: 2;
+        }
+
+        .list_box ul li a div:last-child
+        {
+            background: url("images/bg.jpg") no-repeat 0 0;
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            z-index: 1;
+        }
+
+        .list_box ul li a:hover div:first-child
+        {
+            -webkit-transform: rotateY(-180deg);
+            -moz-transform: rotateY(-180deg);
+        }
+
+        .list_box ul li a:hover div:last-child
+        {
+            -webkit-transform: rotateY(0);
+            -moz-transform: rotateY(0);
+        }
+
+        .list_box ul li a div h3
+        {
+            margin: 0 auto 15px;
+            padding: 15px 0;
+            width: 200px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 14px;
+            text-align: center;
+            border-bottom: 1px #fff dashed;
+        }
+
+        .list_box ul li a div p
+        {
+            padding: 0 10px;
+            font-size: 12px;
+            text-indent: 2em;
+            line-height: 18px;
+        }
+
+
 .page_honor_list .list_box ul li{
     position:relative;
     height:300px;
@@ -1578,9 +1677,6 @@
 .page_honor_list .list_box ul li .img_box:hover{
 	//background:#14a83b;
 	border:1px solid #14a83b;
-	width:160px;
-    height:240px;
-	padding:9px;
  }
 
 .page_honor_list .list_box ul li img{
@@ -1610,6 +1706,8 @@
 		color:#14a83b;
 	}
 
+	
+	
 /* page_mess 留言页面
 -----------------------------------------------------------------*/
 
