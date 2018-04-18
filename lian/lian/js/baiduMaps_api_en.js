@@ -37,7 +37,7 @@
         })});
         var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
         var opts = {
-          width: 200,
+          width: 270,
           title: markers[index].title,
           enableMessage: false
         };
